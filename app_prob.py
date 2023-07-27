@@ -17,9 +17,11 @@ if trial:
 
 prob = []
 print(sum(state)) 
-for i in state:
-    prob.append(i/sum(state))
-print(prob)
+try:
+    for i in state:
+        prob.append(i/sum(state))
+except:
+    pass
 
 index = [1,2,3,4,5,6]
 table = pd.DataFrame({"횟수": state, 
